@@ -1,9 +1,13 @@
 import React,{Fragment} from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useHistory } from 'react-router-dom'
 import './Writings.css'
 
 function Writings() {
 
+    const history = useHistory()
+    const goHome = () =>{
+        history.push('/')
+        }
     const displayPost = () => {
         let post = document.querySelector('.writings__content')
         post.classList.toggle('show')
@@ -14,7 +18,7 @@ function Writings() {
         <Fragment>
             <nav>
 
-                <div className="nav__name">
+                <div className="nav__name" onClick={goHome}>
                     <h2 className="lastname">𝑀𝒶𝓎𝑜𝓌𝒶</h2>
                     <h2 className="surname">𝓐𝔀𝓸𝔂𝓸𝓶𝓲</h2>
                 </div>

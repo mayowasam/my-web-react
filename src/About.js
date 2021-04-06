@@ -1,16 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link,useHistory} from 'react-router-dom'
 import Thanos from './images/thanos.jpg'
 import Bus from './images/bus.jpg'
 
 import './About.css'
 
+
+
 function About() {
+
+    const history = useHistory()
+    const goHome = () =>{
+        history.push('/')
+        }
     return (
         <div className="container">
             <nav>
 
-                <div className="nav__name">
+                <div className="nav__name" onClick={goHome}>
                     <h2 className="lastname">𝑀𝒶𝓎𝑜𝓌𝒶</h2>
                     <h2 className="surname">𝓐𝔀𝓸𝔂𝓸𝓶𝓲</h2>
                 </div>
