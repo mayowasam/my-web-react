@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Home() {
+function Content() {
     return (
         <div>
-            welcome home
-            <Link to="/content">content</Link>
+            what am i doing
+            <Link to="/">home</Link>
 
         </div>
     )
 }
 
-export default Home
+export default Content
