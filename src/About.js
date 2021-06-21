@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import fineman from './image/image3.jpg'
-import './About.css'
 
 const AboutContainer = styled.div`
     width: 50%;
@@ -56,35 +54,13 @@ text-align: justified;
 
 // `
 
-const Footer = styled.footer`
-    min-height: 30vh;
-    display : flex;
-    align-items : flex-end;
-    border: 2px solid blue;
-    justify-content: space-between;
-    padding: 20px 0;
 
-`
-
-const FooterA = styled.a`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
-
-const FooterLink = styled(Link)`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
 
 function About() {
     return (
         <AboutContainer>
             <AboutHeader>
-                <img src={fineman} alt="" className="profileImg" />
+                <img src={fineman} alt="" />
 
             </AboutHeader>
             <AboutContent>
@@ -99,13 +75,6 @@ function About() {
 
                 </AboutDescription>
             </AboutContent>
-            <Footer>
-                <FooterA href="http://">LinkedIn</FooterA>
-                <FooterA href="http://github.com/mayowasam">Github</FooterA>
-                <FooterLink to="/about">About</FooterLink>
-                <FooterLink to="/project">Project</FooterLink>
-            </Footer>
-
         </AboutContainer>
     )
 }

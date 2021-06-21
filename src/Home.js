@@ -1,24 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { keyframes } from 'styled-components'
 
-const HomeContainer = styled.div`
+export const HomeContainer = styled.div`
     width: 80%;
     margin: 40px auto 0; 
     border: 2px solid red;
+    height: 60vh;
+
 `
 
-const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
    width: 80%;
-   min-height: 50vh;
    margin: auto;
    border: 2px solid green;
    padding: 20px;
    
 `
 
-const Header = styled.h1`
+export const Header = styled.h1`
     width: 80%;
     font-size: 80px;
     font-weight: bold;
@@ -27,7 +27,7 @@ const Header = styled.h1`
    
 `
 
-const Detail = styled.p`
+export const Detail = styled.p`
    font-size: 24px;
    font-weight: 300;
    opacity: .7
@@ -88,7 +88,7 @@ const shake= keyframes`
   
   `
 
-const Talk = styled.a`
+export const Talk = styled.a`
     animation: ${shake} 0.9s both;
     text-decoration: none;
     font-size: 24px;
@@ -97,29 +97,6 @@ const Talk = styled.a`
      
 `
 
-const Footer = styled.footer`
-    min-height: 30vh;
-    display : flex;
-    align-items : flex-end;
-    border: 2px solid blue;
-    justify-content: space-between;
-    padding: 20px 0;
-
-`
-
-const FooterA = styled.a`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
-
-const FooterLink = styled(Link)`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
 
 function Home() {
     return (
@@ -139,12 +116,6 @@ function Home() {
                 <Talk href="mailto:'awoyomimayowa@gmail.com">Let's talk 🤺.</Talk> 
 
             </HeaderContainer>
-            <Footer>
-                <FooterA href="http://">LinkedIn</FooterA>
-                <FooterA href="http://github.com/mayowasam">Github</FooterA>
-                <FooterLink to="/about">About</FooterLink>
-                <FooterLink to="/project">Project</FooterLink>
-            </Footer>
 
         </HomeContainer>
     )

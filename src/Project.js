@@ -1,18 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import {HomeContainer} from './Home'
 
-const ProjectDiv = styled.div`
-    width: 80%;
-    margin: 40px auto 0; 
-    border: 2px solid red;
-`
 
-const ProjectContainer = styled.div`
+
+const ProjectContainer = styled(HomeContainer)`
    display: grid;
    grid-template-columns: auto auto; 
+   grid-gap: 20px;
 `
-
+const Projects = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid green;
+    text-align: center;
+`
 
 const ProjectTitle = styled.a`
     text-decoration: none;
@@ -27,37 +30,13 @@ const Build = styled.p`
   
 `
 
-const Projects = styled.div`
-  
-`
 
-const Footer = styled.footer`
-    min-height: 30vh;
-    display : flex;
-    align-items : flex-end;
-    border: 2px solid blue;
-    justify-content: space-between;
-    padding: 20px 0;
 
-`
 
-const FooterA = styled.a`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
-
-const FooterLink = styled(Link)`
-    text-decoration: none;
-    font-size: 25px;
-    color: inherit;
-
-`
 
 function Project() {
     return (
-        <ProjectDiv>
+
             <ProjectContainer>
 
                 <Projects>
@@ -105,13 +84,7 @@ function Project() {
                 </Projects>
 
             </ProjectContainer>
-            <Footer>
-                <FooterA href="http://">LinkedIn</FooterA>
-                <FooterA href="http://github.com/mayowasam">Github</FooterA>
-                <FooterLink to="/about">About</FooterLink>
-                <FooterLink to="/project">Project</FooterLink>
-            </Footer>
-        </ProjectDiv>
+
 
     )
 }

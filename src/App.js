@@ -8,6 +8,7 @@ import About from './About'
 import Home from './Home'
 import HomepageTwo from './HomepageTwo'
 import Project from './Project'
+import Footer from './Footer'
 import NotFound from './NotFound'
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route  path="/project" component={Project} />
 
+          <Footer/>
         </ThemeProvider>
           <Route  exact path="*" component={NotFound} />
       </Switch>

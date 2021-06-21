@@ -35,6 +35,13 @@ const Links = styled.a`
 
     
 `
+const MoonIcon = styled(Brightness2Icon)`
+    font-size:3rem !important;
+`
+
+const SunIcon = styled(FlareIcon)`
+    font-size:3rem !important;
+`
 
 function Header(props) {
     const {theme, toggle} = props
@@ -46,7 +53,7 @@ function Header(props) {
                 <Links to="/">Resume</Links>
                 <Links href="http://medium.com/mayowaawoyomi">Blog</Links>
                 <Links href="mailto:'awoyomimayowa@gmail.com">Contact</Links>
-                <div onClick={toggle} className="mui">{theme === 'dark' ? <Brightness2Icon/> : <FlareIcon />}</div>
+                <div onClick={toggle} className="mui">{theme === 'dark' ? <MoonIcon></MoonIcon> : <SunIcon></SunIcon>}</div>
 
             </NavLink>
         </HeaderContainer>
