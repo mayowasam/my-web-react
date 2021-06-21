@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { keyframes } from 'styled-components'
+import {keyframes } from 'styled-components'
+
+import './HomepageTwo.css'
 
 const HomeContainer = styled.div`
     width: 80%;
@@ -10,20 +12,19 @@ const HomeContainer = styled.div`
 `
 
 const HeaderContainer = styled.div`
-   width: 80%;
-   min-height: 50vh;
-   margin: auto;
-   border: 2px solid green;
-   padding: 20px;
+    width: 80%;
+    min-height: 56vh;
+    margin: auto;
+    border: 2px solid green;
+    padding: 20px;
    
 `
 
 const Header = styled.h1`
-    width: 80%;
-    font-size: 80px;
-    font-weight: bold;
-    border: 2px solid green;
-
+   font-size: 80px;
+   font-weight: bold;
+   whitespace: 'wrap';
+  
    
 `
 
@@ -121,22 +122,19 @@ const FooterLink = styled(Link)`
 
 `
 
-function Home() {
+function HomepageTwo() {
     return (
         <HomeContainer>
-            <HeaderContainer>
-                <Header>
-                    Hello! i am
-                    Mayowa Awoyomi
+            <HeaderContainer className="headerH">
+                <Header >
+                    Hi! 
                 </Header>
 
-                <Detail>
-                    Full-stack developer. I am passionate about helping brands
-                    position themselves effectively and help their client build trust in 
-                    their brand. 
+                <Detail >
+                    A problem-solvin' language-learnin' sunuvabish 🙊. Has the mind 🧠 of an artist 🎨 and the keen eye 👀 of a growth engineer 📈.
                 </Detail>
 
-                <Talk href="mailto:'awoyomimayowa@gmail.com">Let's talk 🤺.</Talk> 
+                <Talk href="mailto:'awoyomimayowa@gmail.com" className="headerH">Hit me! 🏌️.</Talk> 
 
             </HeaderContainer>
             <Footer>
@@ -150,4 +148,4 @@ function Home() {
     )
 }
 
-export default Home
+export default HomepageTwo

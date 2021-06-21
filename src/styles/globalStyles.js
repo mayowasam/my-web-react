@@ -14,14 +14,19 @@ body {
     color: ${({theme}) => theme.text};
     transistion: all 0.5s linear;
   }
+
+
+ 
+
 `
 
+
 export const lightTheme = {
-    body: '#fff',
-    text: '#000'
+    body: '#D9ECF0',
+    text: '#10016D'
 } 
 
 export const darkTheme = {
-    body: '#000',
-    text: '#fff'
+    body: '#2F2F2F',
+    text: '#FFB700'
 } 
