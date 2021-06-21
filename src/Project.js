@@ -20,14 +20,21 @@ const Projects = styled.div`
 const ProjectTitle = styled.a`
     text-decoration: none;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: bold;
+    color: inherit;
+    &:hover{
+        background-color: blue;
+        color: white;
+    }
 `
 const ProjectDetail = styled.p`
-  
+color: ${({theme}) => theme.main}
+
 `
 
 const Build = styled.p`
-  
+color: ${({theme}) => theme.main}
+
 `
 
 

@@ -1,33 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
-import {HomeContainer,Header,HeaderContainer, Detail, Talk} from './Home'
+import { HomeContainer, Header, HeaderContainer, Detail, ContactMe, Talk } from './Home'
 
 
+// .someclass{
 
+//     color: '#D2EEF4'
+// }
 
 
 const Container = styled(HeaderContainer)` 
-color: "#D2EEF4"
-  
+
+  color: ${({theme}) => theme.main}
 `
 
 
 
 
 function HomepageTwo() {
-       
+
     return (
         <HomeContainer>
-            <Container >
+            <Container>
                 <Header >
-                    Hi! 
+                    Hi!
                 </Header>
 
                 <Detail >
                     A problem-solvin' language-learnin' sunuvabish 🙊. Has the mind 🧠 of an artist 🎨 and the keen eye 👀 of a growth engineer 📈.
                 </Detail>
 
-                <Talk href="mailto:'awoyomimayowa@gmail.com">Hit me! 🏌️.</Talk> 
+                <ContactMe>
+                    <Talk href="mailto:'awoyomimayowa@gmail.com">Let's talk 🤺.</Talk>
+                </ContactMe>
 
             </Container>
 

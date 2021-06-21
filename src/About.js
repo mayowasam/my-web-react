@@ -29,6 +29,7 @@ font-family: Montserrat;
 font-size: 25px;
 font-weight: 400;
 text-align: justified;
+color:   ${({theme}) => theme.main}
 
 `
 
