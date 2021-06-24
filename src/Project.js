@@ -6,6 +6,7 @@ import {HomeContainer} from './Home'
 
 const ProjectContainer = styled(HomeContainer)`
     width: 60%;
+    margin-top: 15vh; 
     height: 80vh;
     display: grid;
     grid-template-columns: auto auto; 

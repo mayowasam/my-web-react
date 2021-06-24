@@ -9,11 +9,15 @@ const HeaderContainer = styled.div`
     width: 80%;
     height: 15vh;
     align-items: center;
-    margin: 0px auto; 
+    margin: 0 140px; 
+    position: fixed;
+    overflow: hidden;
+    top: 0;
 
 
     @media only screen and (max-width: 600px) {
        width: 100%;
+       margin: 0;
      }
 `
 

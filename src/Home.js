@@ -6,6 +6,7 @@ export const HomeContainer = styled.div`
     width: 80%;
     margin: 0 auto; 
     height: 60vh;
+    margin-top: 15vh; 
 
     @media only screen and (max-width: 600px) {
      width: 100%;
