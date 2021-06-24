@@ -4,18 +4,27 @@ import { keyframes } from 'styled-components'
 
 export const HomeContainer = styled.div`
     width: 80%;
-    margin: 40px auto 0; 
-    border: 2px solid red;
+    margin: 0 auto; 
     height: 60vh;
 
+    @media only screen and (max-width: 600px) {
+     width: 100%;
+     height: 80vh;
+     
+
+   }
 `
 
 export const HeaderContainer = styled.div`
    width: 80%;
    margin: auto;
-   border: 2px solid green;
    padding: 20px;
-   
+
+   @media only screen and (max-width: 600px) {
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;
+  }
 `
 
 
@@ -41,9 +50,12 @@ export const Header = styled.h1`
     width: 80%;
     font-size: 80px;
     font-weight: bold;
-    border: 2px solid green;
     animation: ${tracking} 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-   
+    
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      font-size: 60px;
+    }
 `
 const fade = keyframes`
 0%{
@@ -112,11 +124,13 @@ const vibrate= keyframes`
 
 
   export const ContactMe = styled.button`
-  animation: ${vibrate} 0.5s linear infinite both;    
+  animation: ${vibrate} 0.5s linear infinite both;
+  border: 3px solid #FFB700;    
 
      
 `
 export const Talk = styled.a`
+    display: inline-block;
     text-decoration: none;
     font-size: 24px;
     font-weight: 300;

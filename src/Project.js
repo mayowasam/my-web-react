@@ -5,16 +5,31 @@ import {HomeContainer} from './Home'
 
 
 const ProjectContainer = styled(HomeContainer)`
-   display: grid;
-   grid-template-columns: auto auto; 
-   grid-gap: 20px;
+    width: 60%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-gap: 30px;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        min-height: 150vh;
+        justify-content: space-evenly;
+      }
 `
 const Projects = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border: 2px solid green;
-    text-align: center;
+    align-items: flex-start;
+    text-align: justify;
+    border: 2px solid red
+
+    @media only screen and (max-width: 600px) {
+        text-align: justify;
+      }
 `
 
 const ProjectTitle = styled.a`
@@ -23,20 +38,33 @@ const ProjectTitle = styled.a`
     font-weight: bold;
     color: inherit;
     &:hover{
-        background-color: blue;
         color: white;
     }
 `
 const ProjectDetail = styled.p`
-color: ${({theme}) => theme.main}
+    color: ${({theme}) => theme.main};
+    opacity: .7;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    
 
 `
 
-const Build = styled.p`
-color: ${({theme}) => theme.main}
+const Build = styled.div`
+    display: flex;
+    color: ${({theme}) => theme.main}
 
 `
+const BuildTitle = styled.p`
+    display: flex;
+    color: ${({theme}) => theme.main};
+    padding-right: 10px
 
+`
+const BuildDetail = styled.p`
+    opacity: .7
+`
 
 
 
@@ -52,7 +80,8 @@ function Project() {
                         A spotify app that shows you the current biilboard chart when you login
                     </ProjectDetail>
                     <Build>
-                        Built with: React
+                        <BuildTitle>Built with:</BuildTitle> 
+                        <BuildDetail>React</BuildDetail>
                     </Build>
                 </Projects>
 
@@ -62,7 +91,8 @@ function Project() {
                         An mimicry of amazon
                     </ProjectDetail>
                     <Build>
-                        Built with: React, Firebase
+                        <BuildTitle>Built with:</BuildTitle> 
+                        <BuildDetail>React, Firebase</BuildDetail>
                     </Build>
                 </Projects>
 
@@ -71,7 +101,10 @@ function Project() {
                     <ProjectDetail>
                         A Spotify search app that shows you a list of songs regardless of you search input that you can play
                     </ProjectDetail>
-                    <Build>Built with: React, Express, Nodejs</Build>
+                    <Build>
+                        <BuildTitle>Built with:</BuildTitle> 
+                        <BuildDetail>React, Express, Nodejs</BuildDetail>
+                    </Build>
                 </Projects>
 
                 <Projects>
@@ -79,7 +112,10 @@ function Project() {
                     <ProjectDetail>
                         A clone of Twitter , that you van send tweets and it shows on your timeline
                     </ProjectDetail>
-                    <Build>Built with: React ,firebase, third party modules</Build>
+                    <Build>
+                        <BuildTitle>Built with:</BuildTitle> 
+                        <BuildDetail>React ,firebase, third party modules</BuildDetail>
+                    </Build>
                 </Projects>
 
                 <Projects>
@@ -87,7 +123,10 @@ function Project() {
                     <ProjectDetail>
                         A simple app
                     </ProjectDetail>
-                    <Build>Built with: React, Redux</Build>
+                    <Build>
+                        <BuildTitle>Built with:</BuildTitle> 
+                        <BuildDetail> React, Redux</BuildDetail>
+                    </Build>
                 </Projects>
 
             </ProjectContainer>

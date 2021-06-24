@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import fineman from './image/image3.jpg'
+import mayowa from './image/mayowa.gif'
 
 const AboutContainer = styled.div`
     width: 50%;
-    margin: 40px auto 0; 
+    margin: 0 auto; 
     border: 2px solid red;
+   
 `
 
 const AboutHeader = styled.div`
@@ -14,7 +16,8 @@ const AboutHeader = styled.div`
    
 `
 const AboutContent = styled.div`
-
+    display: flex;
+    flex-direction: column;
 `
 
 const Title = styled.h1`
@@ -33,27 +36,17 @@ color:   ${({theme}) => theme.main}
 
 `
 
-// const Header = styled.h1`
-//    font-size: 80px;
-//    font-weight: bold;
-//    whitespace: wrap;
+const Image = styled.img`
+    width: 360;
+    height: 500;
 
-
-// `
-
-// const Detail = styled.p`
-//    font-size: 24px;
-//    font-weight: 300;
-//    opacity: .7
-
-// `
-
-// const Talk = styled.span`
-//    font-size: 24px;
-//    font-weight: 300;
-//    opacity: .7
-
-// `
+    .pic {
+        width: 100%;
+    }
+`
+Image.defaultProps = {
+    src: fineman
+}
 
 
 
@@ -61,7 +54,7 @@ function About() {
     return (
         <AboutContainer>
             <AboutHeader>
-                <img src={fineman} alt="" />
+            <img src={fineman} className='pic'/>
 
             </AboutHeader>
             <AboutContent>
@@ -75,6 +68,11 @@ function About() {
                     I do some writing on my Substack blog titled 'Do While Thinking' (geddit...? hah!) where I try to break my mind from the monotone of constant execution without pausing to think. There's no gimmick to the title: it is me doing things while thinking about doing things - keeping the mind sharp while the fingers continue to wear down expensive Macbook keyboards.
 
                 </AboutDescription>
+
+                <AboutHeader>
+                <img src={mayowa} />
+
+                </AboutHeader>  
             </AboutContent>
         </AboutContainer>
     )

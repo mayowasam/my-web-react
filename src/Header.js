@@ -1,19 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Brightness2Icon from '@material-ui/icons/Brightness2'
-import FlareIcon from '@material-ui/icons/Flare'
+import WbSunnyIcon from '@material-ui/icons/WbSunny'
 
 const HeaderContainer = styled.div`
     display: flex;
     width: 80%;
+    height: 15vh;
     align-items: center;
-    margin: 20px auto 40px; 
+    margin: 0px auto; 
+
+
+    @media only screen and (max-width: 600px) {
+       width: 100%;
+     }
 `
 
 const HeaderLogo = styled(Link)`
         flex:.7;
-        font-size:30px;
+        font-size:20px;
         text-decoration: none;
         font-weight: bold;
         color: inherit;
@@ -25,22 +31,84 @@ const NavLink = styled.div`
     align-items: center;
     margin-left: auto;
     justify-content: space-between;
-`
 
+    @media only screen and (max-width: 600px) {
+        justify-content: flex-end;
+       
+     }
+`
+export const scaleup = keyframes`
+0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  `
+  
 const Links = styled.a`
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
     color: inherit;
     font-weight: 400;
 
+    &:hover{
+        animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
+    }
+
+    @media only screen and (max-width: 600px) {
+       display: none;
+      
+    }
     
 `
-const MoonIcon = styled(Brightness2Icon)`
-    font-size:3rem !important;
+
+const heartbeat = keyframes`
+from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
 `
 
-const SunIcon = styled(FlareIcon)`
+
+const MoonIcon = styled(Brightness2Icon)`
     font-size:3rem !important;
+    animation: ${heartbeat} 1.5s ease-in-out infinite both;
+`
+
+const SunIcon = styled(WbSunnyIcon)`
+    font-size:3rem !important;
+    animation: ${heartbeat} 1.5s ease-in-out infinite both;
 `
 
 function Header(props) {
@@ -50,7 +118,7 @@ function Header(props) {
         <HeaderContainer>
             <HeaderLogo to="/" >&lt;MAYOWA/&gt;</HeaderLogo>
             <NavLink>
-                <Links to="/">Resume</Links>
+                <Links href="https://drive.google.com/file/d/14LHhyfO4baXkg2SMuLcwyLZhauyvdG6_/view?usp=drivesdk">Resume</Links>
                 <Links href="http://medium.com/mayowaawoyomi">Blog</Links>
                 <Links href="mailto:'awoyomimayowa@gmail.com">Contact</Links>
                 <div onClick={toggle} className="mui">{theme === 'dark' ? <MoonIcon></MoonIcon> : <SunIcon></SunIcon>}</div>

@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import { HomeContainer, Header, HeaderContainer, Detail, ContactMe, Talk } from './Home'
 
 
-// .someclass{
-
-//     color: '#D2EEF4'
-// }
 
 
 const Container = styled(HeaderContainer)` 
