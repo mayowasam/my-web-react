@@ -23,12 +23,14 @@ body {
 
 export const lightTheme = {
     body: '#D9ECF0',
-    text: '#10016D'
+    text: '#10016D',
+    linker: '#9900FA'
 } 
 
 export const darkTheme = {
     body: '#2F2F2F',
     text: '#FFB700',
     main: '#D2EEF4',
+    linker: '#D5174E'
     
 } 

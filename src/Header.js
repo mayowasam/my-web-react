@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled, {keyframes} from 'styled-components'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyIcon from '@material-ui/icons/WbSunny'
+import Brightness2OutlinedIcon from '@material-ui/icons/Brightness2Outlined'
+import Brightness6OutlinedIcon from '@material-ui/icons/Brightness6Outlined'
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -11,14 +11,26 @@ const HeaderContainer = styled.div`
     align-items: center;
     margin: 0 140px; 
     position: fixed;
-    overflow: hidden;
+    z-index: 1000;
     top: 0;
+    background-color: ${({theme}) => theme.body};
 
+     
+      @media only screen and (min-width: 600px) {
+        width: 100%;
+        margin: 0;
+        z-index: 1000;
+        background-color: ${({theme}) => theme.body};
+ 
+      }
 
-    @media only screen and (max-width: 600px) {
-       width: 100%;
-       margin: 0;
-     }
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        margin: 0;
+        z-index: 1000;
+        background-color: ${({theme}) => theme.body};
+      }
+     
 `
 
 const HeaderLogo = styled(Link)`
@@ -28,6 +40,11 @@ const HeaderLogo = styled(Link)`
         font-weight: bold;
         color: inherit;
 
+        @media only screen and (min-width: 600px) {
+            justify-content:space-evenly;
+            flex:.5;
+         }
+
 `
 const NavLink = styled.div`
     flex:.3;
@@ -36,6 +53,11 @@ const NavLink = styled.div`
     margin-left: auto;
     justify-content: space-between;
 
+    @media only screen and (min-width: 600px) {
+        justify-content:space-evenly;
+        flex:.5;
+     }
+     
     @media only screen and (max-width: 600px) {
         justify-content: flex-end;
        
@@ -47,12 +69,12 @@ export const scaleup = keyframes`
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   `
   
-const Links = styled.a`
+export const Links = styled.a`
     text-decoration: none;
     font-size: 16px;
     color: inherit;
@@ -61,6 +83,12 @@ const Links = styled.a`
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
     }
+
+    @media only screen and (max-width: 1024px) {
+      
+        display: block;
+    }
+ 
 
     @media only screen and (max-width: 600px) {
        display: none;
@@ -105,12 +133,14 @@ from {
 `
 
 
-const MoonIcon = styled(Brightness2Icon)`
+const MoonIcon = styled(Brightness2OutlinedIcon)`
     font-size:3rem !important;
     animation: ${heartbeat} 1.5s ease-in-out infinite both;
+    border-radius: 17px;
+   
 `
 
-const SunIcon = styled(WbSunnyIcon)`
+const SunIcon = styled(Brightness6OutlinedIcon)`
     font-size:3rem !important;
     animation: ${heartbeat} 1.5s ease-in-out infinite both;
 `
@@ -123,7 +153,7 @@ function Header(props) {
             <HeaderLogo to="/" >&lt;MAYOWA/&gt;</HeaderLogo>
             <NavLink>
                 <Links href="https://drive.google.com/file/d/14LHhyfO4baXkg2SMuLcwyLZhauyvdG6_/view?usp=drivesdk">Resume</Links>
-                <Links href="http://medium.com/mayowaawoyomi">Blog</Links>
+                <Links href="http://medium.com/mayowaawoyomi">Writings</Links>
                 <Links href="mailto:'awoyomimayowa@gmail.com">Contact</Links>
                 <div onClick={toggle} className="mui">{theme === 'dark' ? <MoonIcon></MoonIcon> : <SunIcon></SunIcon>}</div>
 

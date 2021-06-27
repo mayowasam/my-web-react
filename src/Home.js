@@ -8,19 +8,27 @@ export const HomeContainer = styled.div`
     height: 60vh;
     margin-top: 15vh; 
 
-    @media only screen and (max-width: 600px) {
-     width: 100%;
-     height: 80vh;
-     
+   
+    @media only screen and (min-width: 600px) {
+      width: 100%;
+     }
 
-   }
+    @media only screen and (max-width: 600px) {
+      margin-top: 15vh; 
+      width: 100%;
+      padding: 0 20px;
+
+    }
+
+   
 `
 
 export const HeaderContainer = styled.div`
    width: 80%;
    margin: auto;
    padding: 20px;
-
+  
+  
    @media only screen and (max-width: 600px) {
     width: 100%;
     margin: 20px 0;
@@ -53,9 +61,13 @@ export const Header = styled.h1`
     font-weight: bold;
     animation: ${tracking} 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     
+
+    
+
     @media only screen and (max-width: 600px) {
       width: 100%;
-      font-size: 60px;
+      font-size: 50px;
+
     }
 `
 const fade = keyframes`
@@ -67,7 +79,7 @@ const fade = keyframes`
 `
 
 export const Detail = styled.p`
-   font-size: 24px;
+   font-size: 20px;
    font-weight: 300;
    opacity: .7;
     animation: 2s ${fade} ease-in
@@ -125,8 +137,10 @@ const vibrate= keyframes`
 
 
   export const ContactMe = styled.button`
-  animation: ${vibrate} 0.5s linear infinite both;
-  border: 3px solid #FFB700;    
+  animation: ${vibrate} 0.9s linear infinite both;
+  border: 3px solid ${({theme}) => theme.text};
+  border-radius: 5px;
+  ;    
 
      
 `
@@ -136,6 +150,8 @@ export const Talk = styled.a`
     font-size: 24px;
     font-weight: 300;
     opacity: .7;
+    color: ${({theme}) => theme.text};
+
      
 `
 
@@ -146,19 +162,19 @@ function Home() {
         <HomeContainer>
             <HeaderContainer>
                 <Header>
-                    Hello! i am
+                    Hello! I am
                     Mayowa Awoyomi
                 </Header>
 
                 <Detail>
-                    Full-stack developer. I am passionate about helping brands
+                I’m a Full-stack developer. I am passionate about helping brands
                     position themselves effectively and help their client build trust in 
-                    their brand. 
+                    their brand. I love the Web platform and I want to make it better for everyone.
                 </Detail>
 
                 <ContactMe>
 
-                <Talk href="mailto:'awoyomimayowa@gmail.com">Let's talk 🤺.</Talk> 
+                <Talk href="mailto:'mayowaawoyomi@gmail.com">Let's talk 🤺.</Talk> 
                 </ContactMe>
 
             </HeaderContainer>
