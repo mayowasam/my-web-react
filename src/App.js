@@ -13,7 +13,9 @@ import NotFound from './NotFound'
 
 
 const Container = styled.div`
- 
+display: flex;
+flex-direction: column;
+align-items: center;
 `
 
 
@@ -30,7 +32,6 @@ function App() {
           <Container>
             <GlobalStyles />
             <Header theme={theme} toggle={toggle} />
-          </Container>
 
 
           <Route exact path="/">
@@ -40,6 +41,7 @@ function App() {
           <Route  path="/project" component={Project} />
 
           <Footer/>
+          </Container>
         </ThemeProvider>
           <Route  exact path="*" component={NotFound} />
       </Switch>

@@ -9,28 +9,12 @@ const HeaderContainer = styled.div`
     width: 80%;
     height: 15vh;
     align-items: center;
-    margin: 0 140px; 
     position: fixed;
     z-index: 1000;
     top: 0;
     background-color: ${({theme}) => theme.body};
 
-     
-      @media only screen and (min-width: 600px) {
-        width: 100%;
-        margin: 0;
-        z-index: 1000;
-        background-color: ${({theme}) => theme.body};
- 
-      }
-
-      @media only screen and (max-width: 600px) {
-        width: 100%;
-        margin: 0;
-        z-index: 1000;
-        background-color: ${({theme}) => theme.body};
-      }
-     
+   
 `
 
 const HeaderLogo = styled(Link)`
@@ -39,29 +23,27 @@ const HeaderLogo = styled(Link)`
         text-decoration: none;
         font-weight: bold;
         color: inherit;
-
-        @media only screen and (min-width: 600px) {
-            justify-content:space-evenly;
-            flex:.5;
-         }
-
+        @media only screen and (min-width: 764px) {
+            flex: .5
+        
+        }
+    
 `
 const NavLink = styled.div`
     flex:.3;
     display: flex;
     align-items: center;
     margin-left: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
-    @media only screen and (min-width: 600px) {
-        justify-content:space-evenly;
-        flex:.5;
-     }
-     
+    @media only screen and (min-width: 764px) {
+        flex: .5;
+    }
+
     @media only screen and (max-width: 600px) {
         justify-content: flex-end;
-       
-     }
+    }
+   
 `
 export const scaleup = keyframes`
 0% {
@@ -81,18 +63,15 @@ export const Links = styled.a`
     font-weight: 400;
 
     &:hover{
-        animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
+        animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        font-weight: bold;
     }
 
-    @media only screen and (max-width: 1024px) {
-      
-        display: block;
+    @media only screen and (max-width: 764px) {
+        padding-left: 5px;
     }
- 
-
     @media only screen and (max-width: 600px) {
-       display: none;
-      
+        display: none;
     }
     
 `

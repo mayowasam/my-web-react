@@ -13,6 +13,7 @@ body {
     background-color: ${({theme}) => theme.body};
     color: ${({theme}) => theme.text};
     transistion: all 0.5s linear;
+    width: 100%;
   }
 
 

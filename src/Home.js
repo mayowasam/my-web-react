@@ -4,36 +4,43 @@ import { keyframes } from 'styled-components'
 
 export const HomeContainer = styled.div`
     width: 80%;
-    margin: 0 auto; 
-    height: 60vh;
-    margin-top: 15vh; 
-
+    margin-top: 20vh;
+    padding: 20px 0 ;
    
-    @media only screen and (min-width: 600px) {
-      width: 100%;
-     }
-
     @media only screen and (max-width: 600px) {
-      margin-top: 15vh; 
-      width: 100%;
-      padding: 0 20px;
+      margin-top: 15vh;
+      padding: 0;
 
-    }
+  }
 
+  @media only screen and (max-width: 360px) {
+    margin-top: 15vh;
+    padding: 0;
+  }
    
 `
 
+
+
 export const HeaderContainer = styled.div`
-   width: 80%;
+   width: 50%;
    margin: auto;
    padding: 20px;
-  
-  
+
+   @media only screen and (max-width: 1024px) {
+    width: 70%;
+
+  }
    @media only screen and (max-width: 600px) {
     width: 100%;
-    margin: 20px 0;
-    padding: 0;
+
   }
+  @media only screen and (max-width: 360px) {
+    width: 100%;
+   padding: 0;
+
+  }
+   
 `
 
 
@@ -56,19 +63,25 @@ const tracking = keyframes`
 
 `
 export const Header = styled.h1`
-    width: 80%;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
     animation: ${tracking} 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     
-
-    
-
-    @media only screen and (max-width: 600px) {
-      width: 100%;
-      font-size: 50px;
-
+    @media only screen and (max-width: 1024px) {
+      font-size: 60px;
+  
     }
+    @media only screen and (max-width: 600px) {
+      font-size: 50px;
+      font-weight: bolder;
+    } 
+
+    @media only screen and (max-width: 280px) {
+      font-size: 40px;
+      font-weight: bolder;
+    } 
+
+   
 `
 const fade = keyframes`
 0%{
@@ -81,7 +94,6 @@ const fade = keyframes`
 export const Detail = styled.p`
    font-size: 20px;
    font-weight: 300;
-   opacity: .7;
     animation: 2s ${fade} ease-in
 `
 
@@ -149,7 +161,6 @@ export const Talk = styled.a`
     text-decoration: none;
     font-size: 24px;
     font-weight: 300;
-    opacity: .7;
     color: ${({theme}) => theme.text};
 
      

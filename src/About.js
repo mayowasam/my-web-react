@@ -3,59 +3,160 @@ import { Link } from 'react-router-dom'
 import styled,{keyframes} from 'styled-components'
 import fineman from './image/image3.jpg'
 import mayowa from './image/mayowa.gif'
-import { HomeContainer } from './Home'
 import { Links } from './Header'
 
 
-const AboutContainer = styled(HomeContainer)`
-    width: 50%;
-    margin-top: 15vh; 
-    height: 80vh;
+const AboutContainer = styled.div`
+    width: 80%;
     display: flex;
     flex-direction: column;
-   
-    @media screen and (max-width: 1033px) {}
-    @media screen and (max-width: 1000px) {}
-    @media screen and (max-width: 900px) {
+    padding: 0;
+    margin-top: 20vh;
+
+    @media only screen and (min-width: 764px) {
+        margin-top: 17vh;
+
     }
-    @media screen and (max-width: 800px) {}
-    @media screen and (max-width: 600px){
-        width: 80%;
-        height: 80vh;
-        display: flex;
+
+     @media only screen and (max-width: 600px) {
+      margin-top: 15vh;
+    }
+
+    @media only screen and (max-width: 360px) {
+        margin-top: 15vh;
+    }
+    
+`
+const AboutTop = styled.div`
+    display: flex;
+    flex-direction: column;
+
+`
+
+const AboutRow = styled.div`
+    display: flex;
+    height: 60vh;
+    margin-bottom: 15vh;
+
+    @media only screen and (min-width: 764px) {
+        height: auto;
+
+    }
+
+    @media only screen and (max-width: 600px) {
         flex-direction: column;
+        height: auto;
+        margin-bottom: 5vh;
+
+    }
+
+    @media only screen and (max-width: 360px) {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5vh;
+
+    }
+
+`
+
+
+const AboutImage = styled.div`
+    flex: .5;
+    display: flex;
+    align-items: center;    
+    padding: 10px;
+    justify-content: center;
+
+
+    @media only screen and (max-width: 600px) {
+        margin: 20px 0; 
+        padding: 0;
+
+    }
+
+    @media only screen and (max-width: 360px) {
+        margin: 20px 0; 
+        padding: 0;
+
+    }
+`
+const AboutDescription = styled.div`
+    flex: .5;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    justify-content: center;
+
+
+    @media only screen and (max-width: 600px) {
+        margin: 20px 0; 
+        justify-content: flex-start;
+
+    }
+
+    @media only screen and (max-width: 360px) {
+        margin: 20px 0; 
+        justify-content: flex-start;
+
     }
 `
 
-const AboutHeader = styled.div`
-    max-width: 100%;
-    max-height: 300px;
-   
+const LogoStart = styled.div`
+font-size: 20px;
+font-weight: 300;
+opacity: .3;
+
+
+
 `
 
-// const Image = styled.img`
-//     width: 360;
-//     height: 500;
+const LogoEnd = styled.div`
+font-size: 20px;
+opacity: .3;
+font-weight: 300;
+display: flex;
+justify-content: flex-end;
 
-//     .pic {
-//         width: 100%;
-//     }
-// `
-// Image.defaultProps = {
-//     src: fineman
-// }
+`
+const tilt = keyframes`
+0% {
+    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+    opacity: 1;
+  }
 
+
+`
+const  AboutStory =styled.p`
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 300;
+text-align: justify;
+color:   ${({ theme }) => theme.main};
+animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+`
 
 const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+
 `
 
 
 const AboutContent = styled.div`
     display: flex;
     flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 10vh
+
 `
 
 const textshadow = keyframes`
@@ -73,7 +174,7 @@ const textshadow = keyframes`
 
 const Title = styled.h1`
     font-family: Montserrat;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
     text-align: left;
     animation:  ${textshadow} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -81,76 +182,76 @@ const Title = styled.h1`
 
 `
 
-const tilt = keyframes`
-0% {
-    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-    opacity: 1;
-  }
-
-
-`
-
-
-
-const AboutDescription = styled.p`
-font-family: Montserrat;
-font-size: 20px;
-font-weight: 300;
-text-align: justify;
-color:   ${({ theme }) => theme.main};
-animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-`
-
 
 const AboutLinks = styled(Links)`
-    font-size: 25px;
-    color: ${({ theme }) => theme.linker}
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:  ${({theme}) => theme.text};
+
    
 `
 const AboutLink = styled(Link)`
-    font-size: 25px;
-    color: ${({ theme }) => theme.linker};
-    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:  ${({theme}) => theme.text};
 `
 
 function About() {
     return (
         <AboutContainer>
-            <AboutHeader>
-                <Image src={mayowa} alt="" />
-            </AboutHeader>
+            <AboutTop>
+
+                <AboutRow>
+                    <AboutImage>
+                        <Image src={mayowa} alt="" />
+                    </AboutImage>
+
+                    <AboutDescription>
+                        <LogoStart>&lt;start/&gt;</LogoStart>
+                        <AboutStory>
+                            I am a full-stack web developer. I write in JavaScript.
+                            React is my frontend library of choice, and I write my REST APIs in NodeJS.
+                            I love MongoDB and MySQL. I love to share what I'm learning and talk about problems i encounter,
+                            or helpful things i learnt while working on a project on <AboutLinks href="http://medium.com/mayowaawoyomi">my blog</AboutLinks>.
+                            When I am not bashing my head against a keyboard because something won't act the way I expect it to,
+                            I am listening to a crap-load of music, reading a crap-load of blog posts, playing fifa or hanging out with my awesome friends.
+                            I want to make a difference. I want to help make the Web better for everyone. And I want to help make a change in the world,
+                            to the better of everyone living in it. If your company is working on a product that makes people's lives better in any aspect and in any way and you need someone to help you make it inclusive and accessible to more people, I would love to help you.
+                        </AboutStory>
+                        <LogoEnd>&lt;start/&gt;</LogoEnd>
+
+                    </AboutDescription>
+                </AboutRow>
+
+                <AboutRow>
+                    <AboutDescription>
+                        <LogoStart>&lt;start/&gt;</LogoStart>
+
+                        <AboutStory>
+                            I build resilient UI foundations for users online experiences. <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
+                            I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
+                            I have a Bachelor’s Degree in Civil Engineering.
+                        </AboutStory>
+                        <LogoEnd>&lt;start/&gt;</LogoEnd>
+
+                    </AboutDescription>
+
+                    <AboutImage>
+                        <Image src={fineman} />
+
+                    </AboutImage>
+                </AboutRow> 
+
+
+            </AboutTop>
+
+
             <AboutContent>
-                <Title>M</Title>
-                <AboutDescription>
-                    I am a full-stack web developer. I write in JavaScript.
-                    React is my frontend library of choice, and I write my REST APIs in NodeJS.
-                    I love MongoDB and MySQL. I love to share what I'm learning and talk about problems i encounter,
-                    or helpful things i learnt while working on a project on <AboutLinks href="http://medium.com/mayowaawoyomi">my blog</AboutLinks>.
-                    When I am not bashing my head against a keyboard because something won't act the way I expect it to,
-                    I am listening to a crap-load of music, reading a crap-load of blog posts, playing fifa or hanging out with my awesome friends.
-                    I want to make a difference. I want to help make the Web better for everyone. And I want to help make a change in the world,
-                    to the better of everyone living in it. If your company is working on a product that makes people's lives better in any aspect and in any way and you need someone to help you make it inclusive and accessible to more people, I would love to help you.
 
-                </AboutDescription>
-
-                <AboutHeader>
-                    <Image src={fineman} />
-
-                </AboutHeader>
-                <AboutDescription>
-                    I build resilient UI foundations for users online experiences. <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
-                    I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
-                    I have a Bachelor’s Degree in Civil Engineering.
-                </AboutDescription>
-                <Title>Hire me</Title>
-                <AboutDescription>
+                <Title>Hire Me</Title>
+                <AboutStory>
                     I’m a design-minded developer.  I work to bring designs of unique designers and Imaginations of creative people to life.
 
                     I write clean HTML, CSS, SVG, and presentational JavaScript that powers Web user interfaces. With a focus on responsive design, semantic markup, accessibility, and performance and  Cross-browser compatibility, I build resilient, inclusive foundations for user interfaces, marrying cutting-edge techniques with foundational Web standards.
@@ -170,7 +271,7 @@ function About() {
                     Vue
                     Node.js
                     WordPress
-                </AboutDescription>
+                </AboutStory>
 
             </AboutContent>
         </AboutContainer>
