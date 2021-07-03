@@ -104,8 +104,7 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://mayowasam.github.io/Spotify-clone/">Spotify Clone</ProjectTitle>
                 <ProjectDetail>
-                    A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                    A web app with spotify UI. it runs through spotify data and shows you the current billboard chart for your playing, with a spotify web player 
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with: </BuildTitle>
@@ -116,8 +115,7 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://amzon-clone-7e423.web.app/">Amazon Clone</ProjectTitle>
                 <ProjectDetail>
-                    An mimicry of amazon. A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                     A clone of amazon, with firebase authentication for the signup. It has products being displayed where buyers can select product and on the checkout page and get a total of the amount of all products.also on the checjkout page , buyers acan remove product from its basket
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with: </BuildTitle>
@@ -128,8 +126,8 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://github.com/mayowasam/spotify-with-react-and-node">Spotify Search Clone</ProjectTitle>
                 <ProjectDetail>
-                    A Spotify search app that shows you a list of songs regardless of you search input that you can play. A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                    A Spotify search app that runs through spotify database and shows you a list of songs whenever you input a word in the search input.
+                    View your top artists, top tracks, recently tracks, and many more and play with the spotify media player.
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with: </BuildTitle>
@@ -140,9 +138,9 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://spotify-clone-8c5ff.web.app">Twitter Clone</ProjectTitle>
                 <ProjectDetail>
-                    A clone of Twitter , that you van send tweets and it shows on your timeline.
-                    A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                    A clone of Twitter with twitter UI, that you van send tweets and it shows in realtime your timeline.
+                    Also has a widget which displays netflix naija contents built using a third party module
+                   
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with:</BuildTitle>
@@ -154,8 +152,7 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://github.com/mayowasam/account-balance-react-assignment">Account Balance</ProjectTitle>
                 <ProjectDetail>
-                    A simple app.  A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                    A simple app with two buttons which adds or subtracts a specific amount from and existing amount like a bank. 
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with: </BuildTitle>
@@ -167,9 +164,7 @@ function Project() {
             <Projects>
                 <ProjectTitle href="https://github.com/mayowasam/account-balance-react-assignment">My Website</ProjectTitle>
                 <ProjectDetail>
-                    A simple app.
-                    A spotify app that shows you the current biilboard chart when you login
-                    A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more
+                   This website with cool features like, darkmode, two landing pages which changes when the moon or star button at the top is toggled , a responsive header and footer depending on the device size
                 </ProjectDetail>
                 <Build>
                     <BuildTitle>Built with:</BuildTitle>

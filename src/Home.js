@@ -179,8 +179,7 @@ function Home() {
 
                 <Detail>
                 I’m a Full-stack developer. I am passionate about helping brands
-                    position themselves effectively and help their client build trust in 
-                    their brand. I love the Web platform and I want to make it better for everyone.
+                    position themselves effectively. I love the Web and I want to make it better for everyone.
                 </Detail>
 
                 <ContactMe>

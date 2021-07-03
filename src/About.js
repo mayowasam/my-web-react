@@ -140,6 +140,26 @@ font-weight: 300;
 text-align: justify;
 color:   ${({ theme }) => theme.main};
 animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+line-height: 1.5;
+
+`
+
+const  AboutDiv =styled.div`
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 300;
+text-align: justify;
+color:   ${({ theme }) => theme.main};
+animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+line-height: 1.5;
+
+`
+
+const  Bold =styled.span`
+font-family: Montserrat;
+font-size: 20px;
+font-weight: bold;
+color:   ${({ theme }) => theme.text};
 
 `
 
@@ -211,15 +231,19 @@ function About() {
                     <AboutDescription>
                         <LogoStart>&lt;start/&gt;</LogoStart>
                         <AboutStory>
-                            I am a full-stack web developer. I write in JavaScript.
+                            I do both the front-end and the back-end of web development. Cool people call people who do what i do <Bold>Full-stack web developers</Bold> and others just say software developers. I write in JavaScript.
                             React is my frontend library of choice, and I write my REST APIs in NodeJS.
                             I love MongoDB and MySQL. I love to share what I'm learning and talk about problems i encounter,
                             or helpful things i learnt while working on a project on <AboutLinks href="http://medium.com/mayowaawoyomi">my blog</AboutLinks>.
-                            When I am not bashing my head against a keyboard because something won't act the way I expect it to,
-                            I am listening to a crap-load of music, reading a crap-load of blog posts, playing fifa or hanging out with my awesome friends.
-                            I want to make a difference. I want to help make the Web better for everyone. And I want to help make a change in the world,
+                            I want to help make the Web better for everyone. And I want to help make a change in the world,
                             to the better of everyone living in it. If your company is working on a product that makes people's lives better in any aspect and in any way and you need someone to help you make it inclusive and accessible to more people, I would love to help you.
+                            I want to make a difference.
+
                         </AboutStory>
+                        <AboutStory>
+                           I love music, I love football when Arsenal are playing well, I love playing FIFA and I really love hanging out with my friends and family, they make the world around me feel sane.
+                       </AboutStory>
+
                         <LogoEnd>&lt;start/&gt;</LogoEnd>
 
                     </AboutDescription>
@@ -230,9 +254,10 @@ function About() {
                         <LogoStart>&lt;start/&gt;</LogoStart>
 
                         <AboutStory>
-                            I build resilient UI foundations for users online experiences. <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
-                            I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
-                            I have a Bachelor’s Degree in Civil Engineering.
+                            As the web get bigger, codes get shorter, cleaner, and more readable, I build apps having those points in mind. <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
+                            I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select personal projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
+                            I have a Bachelor’s Degree in Civil Engineering. My interest in web development started back in 2017 when i tried re-creating Arsenal's website with just HTML and CSS.
+
                         </AboutStory>
                         <LogoEnd>&lt;start/&gt;</LogoEnd>
 
@@ -252,26 +277,33 @@ function About() {
 
                 <Title>Hire Me</Title>
                 <AboutStory>
-                    I’m a design-minded developer.  I work to bring designs of unique designers and Imaginations of creative people to life.
+                    I’m a design-minded and security conscious developer. I work to bring designs of unique designers and Imaginations of creative people to life.
+                    I write clean codes that powers Web With a focus on responsive design, semantic markup, accessibility, and performance and  Cross-browser compatibility and most importantly data and app security.
+                    I collaborate with designers — preferrably in the design phase — to translate designs into live prototypes, resilient Web user interafces, and design systems.
+                </AboutStory>
 
-                    I write clean HTML, CSS, SVG, and presentational JavaScript that powers Web user interfaces. With a focus on responsive design, semantic markup, accessibility, and performance and  Cross-browser compatibility, I build resilient, inclusive foundations for user interfaces, marrying cutting-edge techniques with foundational Web standards.
+                <AboutStory>
+                    I hold myself to high standards, and provide high value for the investment you make in me. I am a very good team player and i have great communication skills and social skills 
+                </AboutStory>
 
-                    I collaborate with designers — preferrably in the design phase — to translate designs into live prototypes, resilient Web user interafces, and design systems. As a design engineer, I provide feedback to designers to ensure that the design translates well to the browser, ensuring usability of the product by as many people as possible, regardless of their context and how they use it (screen readers, mobile phones, various browsers, etc.)
-
-                    I hold myself to high standards, and provide high value for the investment you make in me.
-                    I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
-
-                    Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
-
+                <AboutDiv>
                     Here are a few technologies I've been working with recently:
 
-                    JavaScript (ES6+)
-                    React
-                    Eleventy
-                    Vue
-                    Node.js
-                    WordPress
-                </AboutStory>
+                    <ul>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        <li>GIT</li>
+                        <li>Redux</li>
+                        <li>MongoDB</li>
+                        <li>mySQL</li>
+                        <li>Socket</li>
+                        <li>Heroku</li>
+                        <li>Firebase</li>
+                        
+                    </ul>          
+                    <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Hire me </AboutLinks>.
+                </AboutDiv>
 
             </AboutContent>
         </AboutContainer>

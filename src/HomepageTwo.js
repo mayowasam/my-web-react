@@ -23,8 +23,8 @@ function HomepageTwo() {
                 </Header>
 
                 <Detail >
-                    I build cool things that work on computers.
-                    A problem-solvin' language-learnin' sunuvabish 🙊. Has the mind 🧠 of an artist 🎨 and the keen eye 👀 of a growth engineer 📈.
+                    I enjoy creating cool things that live on the internet
+                
                 </Detail>
 
                 <ContactMe>

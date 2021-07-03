@@ -70,8 +70,8 @@ function Footer() {
                 <FooterA href="http://github.com/mayowasam">Github</FooterA>
                 <FooterLink to="/about">About</FooterLink>
                 <FooterLink to="/project">Project</FooterLink>
-                <FooterA href="https://drive.google.com/file/d/14LHhyfO4baXkg2SMuLcwyLZhauyvdG6_/view?usp=drivesdk" className="toggle">Resume</FooterA>
-                <FooterA href="http://medium.com/mayowaawoyomi" className="toggle">Writings</FooterA>
+                <FooterA href="https://drive.google.com/u/0/uc?id=15FE62UkObDnNVZ-SJW69Y-awBHRUHN2p&export=download" className="toggle">Resume</FooterA>
+                <FooterA href="http://medium.com/@mayowaawoyomi" className="toggle">Writings</FooterA>
                 <FooterA href="mailto:'mayowaawoyomi@gmail.com" className="toggle">Contact</FooterA>
 
         </FooterContainer>
