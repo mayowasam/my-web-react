@@ -162,7 +162,7 @@ function Project() {
 
 
             <Projects>
-                <ProjectTitle href="https://mayowasam.github.io/website/">My Website</ProjectTitle>
+                <ProjectTitle href=" https://mayowasam.github.io/web/">My Website</ProjectTitle>
                 <ProjectDetail>
                    This website with cool features like, darkmode, two landing pages which changes when the moon or star button at the top is toggled , a responsive header and footer depending on the device size
                 </ProjectDetail>
