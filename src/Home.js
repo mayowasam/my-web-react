@@ -184,7 +184,7 @@ function Home() {
 
                 <ContactMe>
 
-                <Talk href="mailto:'mayowaawoyomi@gmail.com">Let's talk 🤺.</Talk> 
+                <Talk href="mailto:mayowaawoyomi@gmail.com">Let's talk 🤺.</Talk> 
                 </ContactMe>
 
             </HeaderContainer>

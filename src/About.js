@@ -254,7 +254,7 @@ function About() {
                         <LogoStart>&lt;start/&gt;</LogoStart>
 
                         <AboutStory>
-                            As the web get bigger, codes get shorter, cleaner, and more readable, I build apps having those points in mind. <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
+                            As the web get bigger, codes get shorter, cleaner, and more readable, I build apps having those points in mind. <AboutLinks href="mailto:mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
                             I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select personal projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
                             I have a Bachelor’s Degree in Civil Engineering. My interest in web development started back in 2017 when i tried re-creating Arsenal's website with just HTML and CSS.
 
@@ -302,7 +302,7 @@ function About() {
                         <li>Firebase</li>
                         
                     </ul>          
-                    <AboutLinks href="mailto:'mayowaawoyomi@gmail.com">Hire me </AboutLinks>.
+                    <AboutLinks href="mailto:mayowaawoyomi@gmail.com">Hire me </AboutLinks>.
                 </AboutDiv>
 
             </AboutContent>

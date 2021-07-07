@@ -28,7 +28,7 @@ function HomepageTwo() {
                 </Detail>
 
                 <ContactMe>
-                    <Talk href="mailto:'awoyomimayowa@gmail.com">Let's talk 🤺.</Talk>
+                    <Talk href="mailto:mayowaawoyomi@gmail.com">Let's talk 🤺.</Talk>
                 </ContactMe>
 
             </Container>

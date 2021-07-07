@@ -131,9 +131,9 @@ function Header(props) {
         <HeaderContainer>
             <HeaderLogo to="/" >&lt;MAYOWA/&gt;</HeaderLogo>
             <NavLink>
-                <Links href="https://drive.google.com/u/0/uc?id=15FE62UkObDnNVZ-SJW69Y-awBHRUHN2p&export=download" >Resume</Links>
+                <Links href="https://drive.google.com/u/0/uc?id=15U4ag2REsOETPkm-Kg3X7LJLeZtqrZWj&export=download" >Resume</Links>
                 <Links href="http://medium.com/@mayowaawoyomi">Writings</Links>
-                <Links href="mailto:'mayowaawoyomi@gmail.com">Contact</Links>
+                <Links href="mailto:mayowaawoyomi@gmail.com">Contact</Links>
                 <div onClick={toggle} className="mui">{theme === 'dark' ? <MoonIcon></MoonIcon> : <SunIcon></SunIcon>}</div>
 
             </NavLink>

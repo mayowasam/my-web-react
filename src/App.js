@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './Header'
 import styled, { ThemeProvider } from 'styled-components'
 import { useDarkMode } from './styles/useDarkMode'
@@ -22,7 +22,6 @@ align-items: center;
 function App() {
   const [theme, toggle] = useDarkMode()
   const themeMode = theme === 'dark' ? lightTheme : darkTheme
-  console.log(theme)
 
   return (
 

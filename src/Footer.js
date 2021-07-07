@@ -27,6 +27,10 @@ const FooterContainer = styled.footer`
         }
     }
 
+    @media screen and (max-width: 414px) and (min-width: 375px) {
+        width: 90%;
+     }
+
 
     @media only screen and (max-width: 360px) {
         .toggle{
@@ -43,10 +47,23 @@ const FooterA = styled.a`
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
     }
-    @media only screen and (max-width: 600px) {
-        font-size: 12px;
 
+    &:active {
+        color:  ${({ theme }) => theme.linker};
+      };
+
+
+    @media screen and (max-width: 414px) and (min-width: 375px) {
+       padding-right: 3px;
+       font-size: 12px;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
+
+    };
+
+   
    
 `
 
@@ -56,11 +73,23 @@ export const FooterLink = styled(Link)`
     color: inherit;
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
-    }
-    @media only screen and (max-width: 600px) {
+    };
+
+    &:active {
+        color:  ${({ theme }) => theme.linker};
+      };
+
+    @media screen and (max-width: 414px) and (min-width: 375px) {
+        padding-right: 3px;
         font-size: 12px;
+     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
 
     }
+
+   
   
 `
 function Footer() {
@@ -70,9 +99,9 @@ function Footer() {
                 <FooterA href="http://github.com/mayowasam">Github</FooterA>
                 <FooterLink to="/about">About</FooterLink>
                 <FooterLink to="/project">Project</FooterLink>
-                <FooterA href="https://drive.google.com/u/0/uc?id=15FE62UkObDnNVZ-SJW69Y-awBHRUHN2p&export=download" className="toggle">Resume</FooterA>
+                <FooterA href="https://drive.google.com/u/0/uc?id=15U4ag2REsOETPkm-Kg3X7LJLeZtqrZWj&export=download" className="toggle">Resume</FooterA>
                 <FooterA href="http://medium.com/@mayowaawoyomi" className="toggle">Writings</FooterA>
-                <FooterA href="mailto:'mayowaawoyomi@gmail.com" className="toggle">Contact</FooterA>
+                <FooterA href="mailto:mayowaawoyomi@gmail.com" className="toggle">Contact</FooterA>
 
         </FooterContainer>
     )

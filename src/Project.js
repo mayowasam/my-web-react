@@ -124,7 +124,7 @@ function Project() {
             </Projects>
 
             <Projects>
-                <ProjectTitle href="https://github.com/mayowasam/spotify-with-react-and-node">Spotify Search Clone</ProjectTitle>
+                <ProjectTitle href="https://github.com/mayowasam/spotify-with-react-and-node">Spotify Search</ProjectTitle>
                 <ProjectDetail>
                     A Spotify search app that runs through spotify database and shows you a list of songs whenever you input a word in the search input.
                     View your top artists, top tracks, recently tracks, and many more and play with the spotify media player.
