@@ -3,27 +3,30 @@ import { Link } from 'react-router-dom'
 import styled,{keyframes} from 'styled-components'
 import fineman from './image/image3.jpg'
 import mayowa from './image/mayowa.gif'
-import { Links } from './Header'
+import Fade from 'react-reveal/Fade'
+import Zoom from 'react-reveal/Zoom'
 
 
 const AboutContainer = styled.div`
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 20px 50px;
     margin-top: 20vh;
 
     @media only screen and (min-width: 764px) {
-        margin-top: 17vh;
+        margin-top: 10vh;
 
     }
 
      @media only screen and (max-width: 600px) {
-      margin-top: 15vh;
+      margin-top: 10vh;
+      padding: 20px 20px;
+
     }
 
     @media only screen and (max-width: 360px) {
-        margin-top: 15vh;
+        margin-top: 10vh;
     }
     
 `
@@ -84,7 +87,6 @@ const AboutDescription = styled.div`
     flex: .5;
     display: flex;
     flex-direction: column;
-    text-align: justify;
     padding: 10px;
     justify-content: center;
 
@@ -119,27 +121,26 @@ display: flex;
 justify-content: flex-end;
 
 `
-const tilt = keyframes`
-0% {
-    -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-            transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-            transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-    opacity: 1;
-  }
+// const tilt = keyframes`
+// 0% {
+//     -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+//             transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+//             transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+//     opacity: 1;
+//   }
 
 
-`
+// `
 const  AboutStory =styled.p`
 font-family: Montserrat;
 font-size: 20px;
 font-weight: 300;
 text-align: justify;
 color:   ${({ theme }) => theme.main};
-animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 line-height: 1.5;
 
 `
@@ -148,9 +149,7 @@ const  AboutDiv =styled.div`
 font-family: Montserrat;
 font-size: 20px;
 font-weight: 300;
-text-align: justify;
 color:   ${({ theme }) => theme.main};
-animation: ${tilt} 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 line-height: 1.5;
 
 `
@@ -173,7 +172,6 @@ const Image = styled.img`
 const AboutContent = styled.div`
     display: flex;
     flex-direction: column;
-    text-align: justify;
     padding: 10px;
     margin-bottom: 10vh
 
@@ -203,11 +201,12 @@ const Title = styled.h1`
 `
 
 
-const AboutLinks = styled(Links)`
+const AboutLinks = styled.a`
     font-size: 20px;
     font-weight: bold;
     text-decoration: underline;
     color:  ${({theme}) => theme.text};
+    display: block;
 
    
 `
@@ -224,48 +223,52 @@ function About() {
             <AboutTop>
 
                 <AboutRow>
+                   
                     <AboutImage>
                         <Image src={mayowa} alt="" />
                     </AboutImage>
+                  
 
                     <AboutDescription>
-                        <LogoStart>&lt;start/&gt;</LogoStart>
-                        <AboutStory>
-                            I do both the front-end and the back-end of web development. Cool people call people who do what i do <Bold>Full-stack web developers</Bold> and others just say software developers. I write in JavaScript.
-                            React is my frontend library of choice, and I write my REST APIs in NodeJS.
-                            I love MongoDB and MySQL. I love to share what I'm learning and talk about problems i encounter,
-                            or helpful things i learnt while working on a project on <AboutLinks href="http://medium.com/mayowaawoyomi">my blog</AboutLinks>.
-                            I want to help make the Web better for everyone. And I want to help make a change in the world,
-                            to the better of everyone living in it. If your company is working on a product that makes people's lives better in any aspect and in any way and you need someone to help you make it inclusive and accessible to more people, I would love to help you.
-                            I want to make a difference.
+                        <Fade right>
+                            <LogoStart>&lt;start/&gt;</LogoStart>
+                            <AboutStory>
+                                I do both the front-end and the back-end of web development. Cool people call people who do what i do <Bold>Full-stack web developers</Bold> and others just say software developers. I write in JavaScript.
+                                React is my frontend library of choice, and I write my REST APIs in NodeJS.
+                                I love MongoDB and MySQL. I love to share what I'm learning and talk about problems i encounter,
+                                or helpful things i learnt while working on a project on <AboutLinks href="http://medium.com/mayowaawoyomi">my blog</AboutLinks>
+                                I want to help make the Web better for everyone. And I want to help make a change in the world,
+                                to the better of everyone living in it. If your company is working on a product that makes people's lives better in any aspect and in any way and you need someone to help you make it inclusive and accessible to more people, I would love to help you.
+                                I want to make a difference.
 
-                        </AboutStory>
-                        <AboutStory>
-                           I love music, I love football when Arsenal are playing well, I love playing FIFA and I really love hanging out with my friends and family, they make the world around me feel sane.
-                       </AboutStory>
+                            </AboutStory>
+                            <AboutStory>
+                            I love music, I love football when Arsenal are playing well, I love playing FIFA and I really love hanging out with my friends and family, they make the world around me feel sane.
+                            </AboutStory>
 
-                        <LogoEnd>&lt;start/&gt;</LogoEnd>
-
+                            <LogoEnd>&lt;start/&gt;</LogoEnd>
+                        </Fade>
                     </AboutDescription>
                 </AboutRow>
 
                 <AboutRow>
                     <AboutDescription>
-                        <LogoStart>&lt;start/&gt;</LogoStart>
+                        <Fade right>
+                            <LogoStart>&lt;start/&gt;</LogoStart>
 
-                        <AboutStory>
-                            As the web get bigger, codes get shorter, cleaner, and more readable, I build apps having those points in mind. <AboutLinks href="mailto:mayowaawoyomi@gmail.com">Learn more about the work I do or hire me </AboutLinks>.
-                            I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select personal projects that I have worked on are <AboutLink to="/project">here</AboutLink>.
-                            I have a Bachelor’s Degree in Civil Engineering. My interest in web development started back in 2017 when i tried re-creating Arsenal's website with just HTML and CSS.
-
-                        </AboutStory>
-                        <LogoEnd>&lt;start/&gt;</LogoEnd>
-
+                            <AboutStory> 
+                                As the web get bigger, codes get shorter, cleaner, and more readable and I build apps having those points in mind.<AboutLinks href="mailto:mayowaawoyomi@gmail.com">Learn more about the work I do or hire me.</AboutLinks>
+                                I’ve worked on projects of different scales of Web applications. Some of my favorite projects are covered under NDAs, but a few select personal projects that I have worked on are <AboutLink to="/project">here.</AboutLink>
+                                I have a Bachelor’s Degree in Civil Engineering. My interest in web development started back in 2017 when i tried re-creating Arsenal's website with just HTML and CSS.
+                            </AboutStory>
+                            <LogoEnd>&lt;start/&gt;</LogoEnd>
+                        </Fade>
                     </AboutDescription>
 
                     <AboutImage>
+                        <Zoom>
                         <Image src={fineman} />
-
+                        </Zoom>
                     </AboutImage>
                 </AboutRow> 
 
@@ -274,7 +277,7 @@ function About() {
 
 
             <AboutContent>
-
+                <Fade right>
                 <Title>Hire Me</Title>
                 <AboutStory>
                     I’m a design-minded and security conscious developer. I work to bring designs of unique designers and Imaginations of creative people to life.
@@ -302,9 +305,9 @@ function About() {
                         <li>Firebase</li>
                         
                     </ul>          
-                    <AboutLinks href="mailto:mayowaawoyomi@gmail.com">Hire me </AboutLinks>.
+                    <AboutLinks href="mailto:mayowaawoyomi@gmail.com">Hire me </AboutLinks>
                 </AboutDiv>
-
+                </Fade>
             </AboutContent>
         </AboutContainer>
     )

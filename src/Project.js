@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { HomeContainer } from './Home'
+import Fade from 'react-reveal/Fade'
 
 
 
@@ -42,7 +43,6 @@ const Projects = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    text-align: justify;
     padding: 10px;
 
     @media only screen and (max-width: 360px) {
@@ -67,7 +67,8 @@ const ProjectDetail = styled.p`
     font-size: 16px;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    
+    text-align: justify;
+
 
 `
 
@@ -91,6 +92,8 @@ const BuildDetail = styled.p`
     color: ${({ theme }) => theme.linker};
     font-weight: bold;
     white-space: nowrap;
+    text-align: justify;
+
 `
 
 
@@ -102,6 +105,7 @@ function Project() {
         <ProjectContainer>
 
             <Projects>
+                <Fade top cascade>
                 <ProjectTitle href="https://mayowasam.github.io/Spotify-clone/">Spotify Clone</ProjectTitle>
                 <ProjectDetail>
                     A web app with spotify UI. it runs through spotify data and shows you the current billboard chart for your playing, with a spotify web player 
@@ -110,9 +114,11 @@ function Project() {
                     <BuildTitle>Built with: </BuildTitle>
                     <BuildDetail>React</BuildDetail>
                 </Build>
+                </Fade>
             </Projects>
 
             <Projects>
+                <Fade top cascade>
                 <ProjectTitle href="https://amzon-clone-7e423.web.app/">Amazon Clone</ProjectTitle>
                 <ProjectDetail>
                      A clone of amazon, with firebase authentication for the signup. It has products being displayed where buyers can select product and on the checkout page and get a total of the amount of all products.also on the checjkout page , buyers acan remove product from its basket
@@ -121,9 +127,11 @@ function Project() {
                     <BuildTitle>Built with: </BuildTitle>
                     <BuildDetail>React, Firebase</BuildDetail>  
                 </Build>
+                </Fade>
             </Projects>
 
             <Projects>
+            <Fade top cascade>
                 <ProjectTitle href="https://github.com/mayowasam/spotify-with-react-and-node">Spotify Search</ProjectTitle>
                 <ProjectDetail>
                     A Spotify search app that runs through spotify database and shows you a list of songs whenever you input a word in the search input.
@@ -133,9 +141,11 @@ function Project() {
                     <BuildTitle>Built with: </BuildTitle>
                     <BuildDetail>React, Express, Node.js</BuildDetail>      
                 </Build>
+                </Fade>
             </Projects>
 
             <Projects>
+            <Fade top cascade>
                 <ProjectTitle href="https://spotify-clone-8c5ff.web.app">Twitter Clone</ProjectTitle>
                 <ProjectDetail>
                     A clone of Twitter with twitter UI, that you van send tweets and it shows in realtime your timeline.
@@ -147,9 +157,11 @@ function Project() {
                     <BuildDetail>React, Firebase</BuildDetail>
 
                 </Build>
+                </Fade>
             </Projects>
 
             <Projects>
+            <Fade top cascade>
                 <ProjectTitle href="https://github.com/mayowasam/account-balance-react-assignment">Account Balance</ProjectTitle>
                 <ProjectDetail>
                     A simple app with two buttons which adds or subtracts a specific amount from and existing amount like a bank. 
@@ -158,10 +170,12 @@ function Project() {
                     <BuildTitle>Built with: </BuildTitle>
                     <BuildDetail> React, Redux</BuildDetail>
                 </Build>
+                </Fade>
             </Projects>
 
 
             <Projects>
+            <Fade top cascade>
                 <ProjectTitle href=" https://mayowasam.github.io/web/">My Website</ProjectTitle>
                 <ProjectDetail>
                    This website with cool features like, darkmode, two landing pages which changes when the moon or star button at the top is toggled , a responsive header and footer depending on the device size
@@ -170,6 +184,7 @@ function Project() {
                     <BuildTitle>Built with:</BuildTitle>
                     <BuildDetail> React, Styled-Components</BuildDetail>        
                 </Build>
+                </Fade>
             </Projects>
 
         </ProjectContainer>

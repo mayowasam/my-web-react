@@ -2,16 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { scaleup } from './Header'
-
+import {FaGithub} from 'react-icons/fa'
+import {AiOutlineLinkedin, AiOutlineMail, AiOutlineProfile} from 'react-icons/ai'
+import {IoPersonOutline} from 'react-icons/io5'
+import {MdLaptop} from 'react-icons/md'
+import {RiQuillPenLine} from 'react-icons/ri'
 
 const FooterContainer = styled.footer`
     display : flex;
-    width: 80%;
+    width: 100%;
+    padding: 20px 50px;
     position: fixed;
     bottom: 0; 
     background-color: ${({ theme }) => theme.body};
     justify-content: space-between;
-    padding: 20px 0;
   
 
     @media only screen and (min-width: 764px) {
@@ -22,14 +26,13 @@ const FooterContainer = styled.footer`
       
     
     @media only screen and (max-width: 600px) {
+        padding: 20px 20px;
         .toggle{
             display: block;
         }
     }
 
-    @media screen and (max-width: 414px) and (min-width: 375px) {
-        width: 90%;
-     }
+    
 
 
     @media only screen and (max-width: 360px) {
@@ -42,7 +45,7 @@ const FooterContainer = styled.footer`
 
 const FooterA = styled.a`
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
     color: inherit;
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
@@ -52,16 +55,11 @@ const FooterA = styled.a`
         color:  ${({ theme }) => theme.linker};
       };
 
-
-    @media screen and (max-width: 414px) and (min-width: 375px) {
-       padding-right: 3px;
-       font-size: 12px;
-    }
-
     @media only screen and (max-width: 600px) {
-        font-size: 14px;
+        font-size: 40px;
 
-    };
+    }
+   
 
    
    
@@ -69,7 +67,7 @@ const FooterA = styled.a`
 
 export const FooterLink = styled(Link)`
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
     color: inherit;
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;;
@@ -77,31 +75,25 @@ export const FooterLink = styled(Link)`
 
     &:active {
         color:  ${({ theme }) => theme.linker};
-      };
+    };
 
-    @media screen and (max-width: 414px) and (min-width: 375px) {
-        padding-right: 3px;
-        font-size: 12px;
-     }
-
-    @media only screen and (max-width: 600px) {
-        font-size: 14px;
+      @media only screen and (max-width: 600px) {
+        font-size: 40px;
 
     }
-
    
   
 `
 function Footer() {
     return (
         <FooterContainer>
-                <FooterA href="https://www.linkedin.com/in/mayowa-samuel-6a8a9b133/">LinkedIn</FooterA>
-                <FooterA href="http://github.com/mayowasam">Github</FooterA>
-                <FooterLink to="/about">About</FooterLink>
-                <FooterLink to="/project">Project</FooterLink>
-                <FooterA href="https://drive.google.com/u/0/uc?id=15U4ag2REsOETPkm-Kg3X7LJLeZtqrZWj&export=download" className="toggle">Resume</FooterA>
-                <FooterA href="http://medium.com/@mayowaawoyomi" className="toggle">Writings</FooterA>
-                <FooterA href="mailto:mayowaawoyomi@gmail.com" className="toggle">Contact</FooterA>
+                <FooterA href="https://www.linkedin.com/in/mayowa-samuel-6a8a9b133/"><AiOutlineLinkedin/></FooterA>
+                <FooterA href="http://github.com/mayowasam"><FaGithub/></FooterA>
+                <FooterLink to="/about"><IoPersonOutline/></FooterLink>
+                <FooterLink to="/project"><MdLaptop/></FooterLink>
+                <FooterA href="https://drive.google.com/u/0/uc?id=15U4ag2REsOETPkm-Kg3X7LJLeZtqrZWj&export=download" className="toggle">< AiOutlineProfile/></FooterA>
+                <FooterA href="http://medium.com/@mayowaawoyomi" className="toggle"><RiQuillPenLine/></FooterA>
+                <FooterA href="mailto:mayowaawoyomi@gmail.com" className="toggle">< AiOutlineMail/></FooterA>
 
         </FooterContainer>
     )

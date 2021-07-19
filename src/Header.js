@@ -6,13 +6,21 @@ import Brightness6OutlinedIcon from '@material-ui/icons/Brightness6Outlined'
 
 const HeaderContainer = styled.div`
     display: flex;
-    width: 80%;
+    width: 100%;
+    padding: 0 50px;
     height: 15vh;
     align-items: center;
     position: fixed;
     z-index: 1000;
     top: 0;
     background-color: ${({theme}) => theme.body};
+
+    @media only screen and (max-width: 600px) {
+        height: 10vh;
+        padding: 0 20px;
+        justify-content: space-between;
+
+    }
 
    
 `
@@ -23,7 +31,8 @@ const HeaderLogo = styled(Link)`
         text-decoration: none;
         font-weight: bold;
         color: inherit;
-        @media only screen and (min-width: 764px) {
+        
+        @media only screen and (max-width: 600px) {
             flex: .5
         
         }
@@ -33,16 +42,9 @@ const NavLink = styled.div`
     flex:.3;
     display: flex;
     align-items: center;
-    margin-left: auto;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 
-    @media only screen and (min-width: 764px) {
-        flex: .5;
-    }
-
-    @media only screen and (max-width: 600px) {
-        justify-content: flex-end;
-    }
+  
    
 `
 export const scaleup = keyframes`
@@ -61,15 +63,13 @@ export const Links = styled.a`
     font-size: 16px;
     color: inherit;
     font-weight: 400;
+    padding: 0 10px;
 
     &:hover{
         animation: ${scaleup} 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
         font-weight: bold;
     }
 
-    @media only screen and (max-width: 764px) {
-        padding-left: 5px;
-    }
     @media only screen and (max-width: 600px) {
         display: none;
     }
